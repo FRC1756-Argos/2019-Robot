@@ -14,11 +14,14 @@
 		<Property Name="server.vi.propertiesEnabled" Type="Bool">true</Property>
 		<Property Name="specify.custom.address" Type="Bool">false</Property>
 		<Item Name="Test" Type="Folder">
+			<Item Name="Support" Type="Folder">
+				<Item Name="InteractiveDrawArmPath.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/InteractiveDrawArmPath.vi"/>
+				<Item Name="CoordinateConvert_WorldCartesianToShoulderOriginCartesian.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_WorldCartesianToShoulderOriginCartesian.vi"/>
+				<Item Name="ArmPassThroughBodyWristAngle.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPassThroughBodyWristAngle.vi"/>
+			</Item>
 			<Item Name="TestArmPathPlanner.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TestArmPathPlanner.vi"/>
+			<Item Name="MotionProfileTest.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileTest.vi"/>
 		</Item>
-		<Item Name="InteractiveDrawArmPath.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/InteractiveDrawArmPath.vi"/>
-		<Item Name="CoordinateConvert_WorldCartesianToShoulderOriginCartesian.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_WorldCartesianToShoulderOriginCartesian.vi"/>
-		<Item Name="ArmPassThroughBodyWristAngle.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPassThroughBodyWristAngle.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="FPGA_AIChannel.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/AI/FPGA_AIChannel.ctl"/>
