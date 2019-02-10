@@ -18,6 +18,7 @@
 				<Item Name="InteractiveDrawArmPath.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/InteractiveDrawArmPath.vi"/>
 				<Item Name="CoordinateConvert_WorldCartesianToShoulderOriginCartesian.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_WorldCartesianToShoulderOriginCartesian.vi"/>
 				<Item Name="ArmPassThroughBodyWristAngle.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPassThroughBodyWristAngle.vi"/>
+				<Item Name="InRangeTolerance.vim" Type="VI" URL="../ArgosLib/Math/InRangeTolerance.vim"/>
 			</Item>
 			<Item Name="TestArmPathPlanner.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TestArmPathPlanner.vi"/>
 			<Item Name="MotionProfileTest.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileTest.vi"/>
