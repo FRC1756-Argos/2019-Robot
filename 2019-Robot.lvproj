@@ -521,6 +521,7 @@
 			<Item Name="CoordinateConvert_ShoulderOriginCartesianToWorldCartesian_Array.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_ShoulderOriginCartesianToWorldCartesian_Array.vi"/>
 			<Item Name="CoordinateConvert_WorldCartesianToShoulderOriginCartesian_Polygon.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_WorldCartesianToShoulderOriginCartesian_Polygon.vi"/>
 			<Item Name="ArmAbsolutePoseToXYPoint_Array.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmAbsolutePoseToXYPoint_Array.vi"/>
+			<Item Name="ClimberPositionHeights.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Climber/TypeDefs/ClimberPositionHeights.ctl"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
