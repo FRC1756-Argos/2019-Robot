@@ -23,14 +23,23 @@
 #include <Arduino.h>
 
 DebouncedDigitalInput::DebouncedDigitalInput( uint8_t pinNumber,
-                                              bool    usePullup ) : DebouncedDigitalInput(pinNumber, 0, usePullup)
+                                              bool    usePullup ) : DebouncedDigitalInput(pinNumber, NOT_A_PIN, usePullup)
+{
+  // Do nothing
+}
+
+DebouncedDigitalInput::DebouncedDigitalInput( uint8_t pinNumber,
+                                              uint8_t groundPin,
+                                              bool    usePullup ) : DebouncedDigitalInput(pinNumber, groundPin, 0, usePullup)
 {
   // Do nothing
 }
 
 DebouncedDigitalInput::DebouncedDigitalInput( uint8_t  pinNumber,
+                                              uint8_t  groundPin,
                                               uint16_t debounceSamples,
-                                              bool     usePullup ) : m_pinNumber(pinNumber),
+                                              bool     usePullup ) : m_readPin(pinNumber),
+                                                                     m_groundPin(groundPin),
                                                                      m_usePullup(usePullup),
                                                                      m_debounceSamples(debounceSamples),
                                                                      m_initialized(false),
@@ -43,7 +52,18 @@ DebouncedDigitalInput::DebouncedDigitalInput( uint8_t  pinNumber,
 
 void DebouncedDigitalInput::Initialize()
 {
-  pinMode(m_pinNumber, m_usePullup ? INPUT_PULLUP : INPUT);
+  if(!m_initialized)
+  {
+    if(NOT_A_PIN != m_readPin)
+    {
+      pinMode(m_readPin, m_usePullup ? INPUT_PULLUP : INPUT);
+    }
+    if(NOT_A_PIN != m_groundPin)
+    {
+      pinMode(m_groundPin, OUTPUT);
+      digitalWrite(m_groundPin, LOW);
+    }
+  }
   m_initialized = true;
 }
 
@@ -54,7 +74,7 @@ bool DebouncedDigitalInput::Update()
     return false;
   }
 
-  m_rawValue = (digitalRead(m_pinNumber) == HIGH);
+  m_rawValue = (NOT_A_PIN != m_readPin ? (digitalRead(m_readPin) == HIGH) : false);
   if(m_rawValue != m_debouncedValue)
   {
     ++m_debounceCount;
