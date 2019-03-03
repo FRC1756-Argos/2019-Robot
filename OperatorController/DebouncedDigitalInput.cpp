@@ -75,6 +75,7 @@ bool DebouncedDigitalInput::Update()
   }
 
   m_rawValue = (NOT_A_PIN != m_readPin ? (digitalRead(m_readPin) == HIGH) : false);
+  m_rawValue = m_usePullup ? !m_rawValue : m_rawValue;
   if(m_rawValue != m_debouncedValue)
   {
     ++m_debounceCount;

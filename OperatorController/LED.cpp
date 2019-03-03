@@ -140,7 +140,7 @@ void LED::SetPulse()
 
   if(NOT_A_PIN != m_controlPin)
   {
-    uint8_t brightness = PWM_MAX_BRIGHTNESS;
+    uint8_t brightness = 0;
     if(m_illuminate)
     {
       uint16_t period = PULSE_SLOW_PERIOD_MS;
@@ -167,6 +167,7 @@ void LED::SetPulse()
     analogWrite(m_controlPin, GAMMA[brightness]);
   }
 }
+
 
 void LED::SetFlash()
 {

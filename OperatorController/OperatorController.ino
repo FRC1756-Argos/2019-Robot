@@ -174,8 +174,6 @@ void setup() {
 }
 
 void loop() {
-  static int currentButton = 0;
-
   inputs.Update();
   leds.Update();
 
@@ -243,13 +241,4 @@ void loop() {
   {
     Joystick.setButton(index, inputs.GetValue(index));
   }
-
-  ++currentButton;
-
-  if(currentButton >= numOutputButtons)
-  {
-    currentButton = 0;
-  }
-
-  delay(500);
 }
