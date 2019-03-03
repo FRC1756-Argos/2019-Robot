@@ -27,8 +27,8 @@
 
 namespace OCInputs
 {
-  constexpr uint8_t button_feeder_in = 0;
-  constexpr uint8_t button_feeder_gnd = 2;
+  constexpr uint8_t button_feeder_in = A8;
+  constexpr uint8_t button_feeder_gnd = A9;
   constexpr size_t  button_feeder_idx = 0;
   constexpr uint8_t button_depot_in = 16;
   constexpr uint8_t button_depot_gnd = 13;
