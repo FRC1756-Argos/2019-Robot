@@ -23,6 +23,7 @@
 #define DebouncedDigitalInput_H
 
 #include <stdint.h>
+#include "MiscConstants.h"
 
 class DebouncedDigitalInput
 {
@@ -30,7 +31,11 @@ class DebouncedDigitalInput
     DebouncedDigitalInput() = delete;
     DebouncedDigitalInput( uint8_t pinNumber,
                            bool    usePullup = false );
+    DebouncedDigitalInput( uint8_t pinNumber,
+                           uint8_t groundPin,
+                           bool    usePullup = false );
     DebouncedDigitalInput( uint8_t  pinNumber,
+                           uint8_t  groundPin,
                            uint16_t debounceSamples,
                            bool     usePullup = false );
 
@@ -49,7 +54,8 @@ class DebouncedDigitalInput
     void SetDebounceCount(uint16_t newCount);
 
   private:
-    const uint8_t m_pinNumber;       ///< Arduino pin number for this input
+    const uint8_t m_readPin;         ///< Arduino pin number for this input
+    const uint8_t m_groundPin;       ///< Arduino pin number used as a ground source
     const bool    m_usePullup;       ///< True uses Arduino internal pullup resistor
     uint16_t      m_debounceSamples; ///< Number of samples new value must be held before debounced value changes
     bool          m_initialized;     ///< True once initialization has completed

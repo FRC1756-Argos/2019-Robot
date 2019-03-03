@@ -40,55 +40,60 @@ class DebouncedButtonSet
 
     void Initialize()
     {
-      for(size_t i = 0; i < N; ++i)
+      if(!m_initialized)
       {
-        m_buttonSet[i].Initialize();
+        for(size_t i = 0; i < N; ++i)
+        {
+          m_buttonSet[i].Initialize();
+        }
       }
       m_initialized = true;
     };
 
     void Update()
     {
-      for(size_t i = 0; i < N; ++i)
+      if(m_initialized)
       {
-        m_buttonSet[i].Update();
+        for(size_t i = 0; i < N; ++i)
+        {
+          m_buttonSet[i].Update();
+        }
       }
     };
 
     bool GetValue(size_t idx) const
     {
-      if(idx < N)
+      bool retVal = false;
+      if(m_initialized && idx < N)
       {
-        return m_buttonSet[idx].GetValue();
+        retVal = m_buttonSet[idx].GetValue();
       }
-      else
-      {
-        return false;
-      }
+      return retVal;
     };
 
     bool GetRawValue(size_t idx) const
     {
-      if(idx < N)
+      bool retVal = false;
+      if(m_initialized && idx < N)
       {
-        return m_buttonSet[idx].GetRawValue();
+        retVal = m_buttonSet[idx].GetRawValue();
       }
-      else
-      {
-        return false;
-      }
+      return retVal;
     };
 
     void Reset(bool newValue = false)
     {
-      for(size_t i = 0; i < N; ++i)
+      if(m_initialized)
       {
-        m_buttonSet[i].Reset(newValue);
+        for(size_t i = 0; i < N; ++i)
+        {
+          m_buttonSet[i].Reset(newValue);
+        }
       }
     };
     void Reset(size_t idx, bool newValue = false)
     {
-      if(idx < N)
+      if(m_initialized && idx < N)
       {
         m_buttonSet[idx].Reset(newValue);
       }
@@ -96,16 +101,19 @@ class DebouncedButtonSet
 
     void SetDebounceCount(size_t idx, uint16_t newCount)
     {
-      if(idx < N)
+      if(m_initialized && idx < N)
       {
         m_buttonSet[idx].SetDebounceCount(newCount);
       }
     };
     void SetDebounceCount(uint16_t newCount)
     {
-      for(size_t i = 0; i < N; ++i)
+      if(m_initialized)
       {
-        m_buttonSet[i].SetDebounceCount(newCount);
+        for(size_t i = 0; i < N; ++i)
+        {
+          m_buttonSet[i].SetDebounceCount(newCount);
+        }
       }
     };
 
@@ -116,8 +124,8 @@ class DebouncedButtonSet
 
   private:
     DebouncedDigitalInput m_buttonSet[N];
-    bool                     m_initialized;
-    const size_t             m_numButtons;
+    bool                  m_initialized;
+    const size_t          m_numButtons;
 };
 
 #endif
