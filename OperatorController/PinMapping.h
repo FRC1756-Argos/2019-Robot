@@ -206,4 +206,32 @@ namespace OCOutputs
   constexpr size_t  led_extra_unassigned4_idx = 25;
 }
 
+namespace GPButtons
+{
+  constexpr uint8_t numButtons = 22;
+
+  constexpr uint8_t gpButton_feeder_idx = 0;
+  constexpr uint8_t gpButton_depot_idx = 1;
+  constexpr uint8_t gpButton_nearRocketLow_idx = 2;
+  constexpr uint8_t gpButton_nearRocketMid_idx = 3;
+  constexpr uint8_t gpButton_nearRocketHigh_idx = 4;
+  constexpr uint8_t gpButton_farRocketNear_idx = 5;
+  constexpr uint8_t gpButton_farRocketMid_idx = 6;
+  constexpr uint8_t gpButton_farRocketHigh_idx = 7;
+  constexpr uint8_t gpButton_cargoShip_idx = 8;
+  constexpr uint8_t gpButton_left_idx = 9;
+  constexpr uint8_t gpButton_right_idx = 10;
+  constexpr uint8_t gpButton_hatch_idx = 11;
+  constexpr uint8_t gpButton_cargo_idx = 12;
+  constexpr uint8_t gpButton_climb_idx = 13;
+  constexpr uint8_t gpButton_switch1Left_idx = 14;
+  constexpr uint8_t gpButton_switch1Right_idx = 15;
+  constexpr uint8_t gpButton_switch2Left_idx = 16;
+  constexpr uint8_t gpButton_switch2Right_idx = 17;
+  constexpr uint8_t gpButton_button1_idx = 18;
+  constexpr uint8_t gpButton_button2_idx = 19;
+  constexpr uint8_t gpButton_button3_idx = 20;
+  constexpr uint8_t gpButton_button4_idx = 21;
+}
+
 #endif
