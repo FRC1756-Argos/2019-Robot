@@ -215,7 +215,7 @@ namespace GPButtons
   constexpr uint8_t gpButton_nearRocketLow_idx = 2;
   constexpr uint8_t gpButton_nearRocketMid_idx = 3;
   constexpr uint8_t gpButton_nearRocketHigh_idx = 4;
-  constexpr uint8_t gpButton_farRocketNear_idx = 5;
+  constexpr uint8_t gpButton_farRocketLow_idx = 5;
   constexpr uint8_t gpButton_farRocketMid_idx = 6;
   constexpr uint8_t gpButton_farRocketHigh_idx = 7;
   constexpr uint8_t gpButton_cargoShip_idx = 8;
