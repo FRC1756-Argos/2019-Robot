@@ -1,0 +1,323 @@
+<HTML>
+<HEAD>
+<TITLE>ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></A><H2>ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi</H2>
+<P>This VI is launched each time a new client camera connection is requested. The connection will remain open until closed by the client or because of errors with the camera. Parameters are name/lvalue pairs that have been parsed from a URL request. Supported parameters are name, fps, resolution, compression, exposure, brightness, whitebalance, sharpness, and colorlevel.</P>
+<P></P>
+<P>The first four parameters are filled with defaults if not provided, but the latter four are only set if provided.</P>
+<HR>
+<H3>Connector Pane</H3>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vic.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<HR>
+<H3>Front Panel</H3>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vip.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<HR>
+<H3>Controls and Indicators</H3>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cncrn.png" ALT="cncrn"></P>
+</TD>
+<TD>
+<B>connection ID</B> <P><B>connection ID</B> is a network connection refnum that uniquely identifies the TCP connection. Use this value to refer to this connection in subsequent VI calls.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/c1dcclst.png" ALT="c1dcclst"></P>
+</TD>
+<TD>
+<B>parameters</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>Cluster</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>token string</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>token string 2</B> </TD>
+</TR>
+</Table>
+</UL>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>Switched Camera Name</B> </TD>
+</TR>
+</Table>
+<HR>
+<H3>Block Diagram</H3>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid1.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid2.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid3.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid4.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid5.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid6.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid7.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid8.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid9.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid10.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid11.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid12.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid13.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid14.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid15.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid16.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid17.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid18.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid19.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid20.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid21.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid22.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid23.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid24.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid25.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid26.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid27.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vid28.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<HR>
+<H3>List of SubVIs and Express VIs with Configuration Information</H3>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/Clear_Errorsi.png" ALT="Clear Errors.vi"></P>
+</TD>
+<TD>
+<B><P>Clear Errors.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Utility\error.llb\Clear Errors.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/Error_Cluster_From_Error_Codei.png" ALT="Error Cluster From Error Code.vi"></P>
+</TD>
+<TD>
+<B><P>Error Cluster From Error Code.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Utility\error.llb\Error Cluster From Error Code.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/IMAQ_Createi.png" ALT="IMAQ Create"></P>
+</TD>
+<TD>
+<B><P>IMAQ Create</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\vision\Basics.llb\IMAQ Create</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraStarti.png" ALT="WPI_CameraStart.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraStart.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraStart.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/NetComm__UsageReport__ResourceTypectli.png" ALT="NetComm_UsageReport_ResourceType.ctl"></P>
+</TD>
+<TD>
+<B><P>NetComm_UsageReport_ResourceType.ctl</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\SystemInterfaces\NetworkCommunication\NetComm_UsageReport_ResourceType.ctl</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraStopi.png" ALT="WPI_CameraStop.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraStop.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraStop.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraGet_Image_Notifier_Internali.png" ALT="WPI_CameraGet Image Notifier Internal.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraGet Image Notifier Internal.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraGet Image Notifier Internal.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/Image_Typectli.png" ALT="Image Type"></P>
+</TD>
+<TD>
+<B><P>Image Type</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\vision\Image Controls.llb\Image Type</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraSet_Image_Sizei.png" ALT="WPI_CameraSet Image Size.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraSet Image Size.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraSet Image Size.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraSet_Image_Compressioni.png" ALT="WPI_CameraSet Image Compression.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraSet Image Compression.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraSet Image Compression.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/NetComm__UsageReport__reporti.png" ALT="NetComm_UsageReport_report.vi"></P>
+</TD>
+<TD>
+<B><P>NetComm_UsageReport_report.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\SystemInterfaces\NetworkCommunication\NetComm_UsageReport_report.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraIsCameraRefUSBAddressi.png" ALT="WPI_CameraIsCameraRefUSBAddress.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraIsCameraRefUSBAddress.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\USB Support\WPI_CameraIsCameraRefUSBAddress.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraOpenAndSetVideoModei.png" ALT="WPI_CameraOpenAndSetVideoMode.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraOpenAndSetVideoMode.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\USB Support\WPI_CameraOpenAndSetVideoMode.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraSet_Brightnessi.png" ALT="WPI_CameraSet Brightness.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraSet Brightness.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraSet Brightness.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraApplyServerCameraSettingsi.png" ALT="WPI_CameraApplyServerCameraSettings.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraApplyServerCameraSettings.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\USB Support\WPI_CameraApplyServerCameraSettings.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/Safe_Image_Get_Imagei.png" ALT="Safe Image Get Image.vi"></P>
+</TD>
+<TD>
+<B><P>Safe Image Get Image.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\USB Support\Safe Image Get Image.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraSet_Frame_Ratei.png" ALT="WPI_CameraSet Frame Rate.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraSet Frame Rate.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraSet Frame Rate.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraSendMarkedStringi.png" ALT="WPI_CameraSendMarkedString.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraSendMarkedString.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraSendMarkedString.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraPrint_Error_To_Imagei.png" ALT="WPI_CameraPrint Error To Image.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraPrint Error To Image.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraPrint Error To Image.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraImageSizectli.png" ALT="WPI_CameraImageSize.ctl"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraImageSize.ctl</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraImageSize.ctl</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/WPI__CameraRefNum_Registry_Geti.png" ALT="WPI_CameraRefNum Registry Get.vi"></P>
+</TD>
+<TD>
+<B><P>WPI_CameraRefNum Registry Get.vi</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\Rock Robotics\WPI\Camera\WPI_CameraRefNum Registry Get.vi</P>
+</TD>
+</TR>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/IMAQ_Flatten_Image_to_Stringi.png" ALT="IMAQ Flatten Image to String"></P>
+</TD>
+<TD>
+<B><P>IMAQ Flatten Image to String</P>
+</B><P>C:\Program Files (x86)\National Instruments\LabVIEW 2018\vi.lib\vision\Basics.llb\IMAQ Flatten Image to String</P>
+</TD>
+</TR>
+</Table>
+<HR>
+<H3>VI Revision History</H3>
+<P>&quot;ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi History&quot;</P>
+<P>Current Revision:   241</P>
+<HR>
+<H3>Position in Hierarchy</H3>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vih.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+<HR>
+<H3>Iconified Cluster Constants</H3>
+<P><IMG SRC="../../../../img/SwitchingHTTPCameraResponder.vik1.png" ALT="ArgosLib.lvlib:SwitchingHTTPCameraResponder.vi"></P>
+</BODY>
+</HTML>

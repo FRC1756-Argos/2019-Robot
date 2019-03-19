@@ -23,6 +23,7 @@
 			<Item Name="TestArmPathPlanner.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TestArmPathPlanner.vi"/>
 			<Item Name="MotionProfileTest.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileTest.vi"/>
 		</Item>
+		<Item Name="ArgosLib.lvlib" Type="Library" URL="../ArgosLib/ArgosLib.lvlib"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="FPGA_AIChannel.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/AI/FPGA_AIChannel.ctl"/>
@@ -463,7 +464,6 @@
 			<Item Name="ArmPathPlanner.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/ArmPathPlanner.vi"/>
 			<Item Name="ArmCoordinate.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TypeDefs/ArmCoordinate.ctl"/>
 			<Item Name="ArmAbsolutePosition.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TypeDefs/ArmAbsolutePosition.ctl"/>
-			<Item Name="ArgosLib.lvlib" Type="Library" URL="../ArgosLib/ArgosLib.lvlib"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
