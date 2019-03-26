@@ -24,6 +24,8 @@
 			<Item Name="MotionProfileTest.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileTest.vi"/>
 		</Item>
 		<Item Name="ArgosLib.lvlib" Type="Library" URL="../ArgosLib/ArgosLib.lvlib"/>
+		<Item Name="ArmGetCargoLoopPosition.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmGetCargoLoopPosition.vi"/>
+		<Item Name="ArmDontScrapeCargoHoop.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmDontScrapeCargoHoop.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="FPGA_AIChannel.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/AI/FPGA_AIChannel.ctl"/>
@@ -522,6 +524,8 @@
 			<Item Name="CoordinateConvert_WorldCartesianToShoulderOriginCartesian_Polygon.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_WorldCartesianToShoulderOriginCartesian_Polygon.vi"/>
 			<Item Name="ArmAbsolutePoseToXYPoint_Array.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmAbsolutePoseToXYPoint_Array.vi"/>
 			<Item Name="ClimberPositionHeights.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Climber/TypeDefs/ClimberPositionHeights.ctl"/>
+			<Item Name="CoordinateConvert_ShoulderOriginCartesianToWorldCartesian.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_ShoulderOriginCartesianToWorldCartesian.vi"/>
+			<Item Name="CoordinateConvert_WorldCartesianToShoulderOriginCartesian_Array.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_WorldCartesianToShoulderOriginCartesian_Array.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
@@ -1228,7 +1232,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6782B190-04E1-4A41-93AB-3F357B35791E}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">22</Property>
+				<Property Name="Bld_version.build" Type="Int">23</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
