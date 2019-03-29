@@ -22,10 +22,14 @@
 			</Item>
 			<Item Name="TestArmPathPlanner.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TestArmPathPlanner.vi"/>
 			<Item Name="MotionProfileTest.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileTest.vi"/>
+			<Item Name="OperatorControlBox_XControl.xctl" Type="XControl" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerDemoSupport/OperatorControlBox_XControl.xctl"/>
+			<Item Name="ArmPathPlannerDemo.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerDemoSupport/ArmPathPlannerDemo.vi"/>
 		</Item>
 		<Item Name="ArgosLib.lvlib" Type="Library" URL="../ArgosLib/ArgosLib.lvlib"/>
 		<Item Name="ArmGetCargoLoopPosition.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmGetCargoLoopPosition.vi"/>
 		<Item Name="ArmDontScrapeCargoHoop.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmDontScrapeCargoHoop.vi"/>
+		<Item Name="ArmPositionToZeroLengthPlanResponse.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPositionToZeroLengthPlanResponse.vi"/>
+		<Item Name="ArmPlanToPath.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPlanToPath.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="FPGA_AIChannel.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/AI/FPGA_AIChannel.ctl"/>
@@ -457,6 +461,30 @@
 				<Item Name="CTRE_Phoenix_MotorControl_TrajectoryPointTimeDur.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Controls/CTRE_Phoenix_MotorControl_TrajectoryPointTimeDur.ctl"/>
 				<Item Name="lvpidtkt.dll" Type="Document" URL="/&lt;vilib&gt;/addons/control/pid/lvpidtkt.dll"/>
 				<Item Name="NI_PID__prctrl compat.lvlib" Type="Library" URL="/&lt;vilib&gt;/addons/control/pid/NI_PID__prctrl compat.lvlib"/>
+				<Item Name="XControlSupport.lvlib" Type="Library" URL="/&lt;vilib&gt;/_xctls/XControlSupport.lvlib"/>
+				<Item Name="Version To Dotted String.vi" Type="VI" URL="/&lt;vilib&gt;/_xctls/Version To Dotted String.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetSelectedSensorVelocity.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetSelectedSensorVelocity.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetSelectedSensorPosition.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetSelectedSensorPosition.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetSelectedSensorData.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetSelectedSensorData.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetQuadPinData.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetQuadPinData.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetQuadratureData.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetQuadratureData.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetPulseWidthAll.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetPulseWidthAll.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetLimitSwitchStates.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetLimitSwitchStates.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetAnalogData.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetAnalogData.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetDeviceID.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetDeviceID.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetHasResetOccurred.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetHasResetOccurred.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetFirmwareVersion.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetFirmwareVersion.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetGeneralStatus.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetGeneralStatus.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetTemperature.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetTemperature.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetIntegralAccumulator.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetIntegralAccumulator.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetErrorDerivative.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetErrorDerivative.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetClosedLoopError.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetClosedLoopError.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetClosedLoopTarget.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetClosedLoopTarget.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetClosedLoopData.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetClosedLoopData.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetOutputCurrent_Enhanced.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetOutputCurrent_Enhanced.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetBusVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetBusVoltage.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_GetVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetVoltage.vi"/>
+				<Item Name="CTRE_Phoenix_MotorController_Get_Enhanced.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CTRE_Phoenix_MotorController_Get_Enhanced.vi"/>
 			</Item>
 			<Item Name="instr.lib" Type="Folder">
 				<Item Name="DC Motor Controller.lvclass" Type="LVClass" URL="/&lt;instrlib&gt;/DC Motor Controller/HAIOL/DC Motor Controller.lvclass"/>
@@ -526,6 +554,26 @@
 			<Item Name="ClimberPositionHeights.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Climber/TypeDefs/ClimberPositionHeights.ctl"/>
 			<Item Name="CoordinateConvert_ShoulderOriginCartesianToWorldCartesian.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_ShoulderOriginCartesianToWorldCartesian.vi"/>
 			<Item Name="CoordinateConvert_WorldCartesianToShoulderOriginCartesian_Array.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_WorldCartesianToShoulderOriginCartesian_Array.vi"/>
+			<Item Name="OperatorControlBoxButtons_Type.ctl" Type="VI" URL="../DeepSpaceSrc/General/OperatorControlBox/TypeDefs/OperatorControlBoxButtons_Type.ctl"/>
+			<Item Name="OperatorControlBoxButtonPosition_Type.ctl" Type="VI" URL="../DeepSpaceSrc/General/OperatorControlBox/TypeDefs/OperatorControlBoxButtonPosition_Type.ctl"/>
+			<Item Name="ArmPositions.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TypeDefs/ArmPositions.ctl"/>
+			<Item Name="GamePiecePosition.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TypeDefs/GamePiecePosition.ctl"/>
+			<Item Name="ClimberStates.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Climber/TypeDefs/ClimberStates.ctl"/>
+			<Item Name="ClimberHomingState.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Climber/TypeDefs/ClimberHomingState.ctl"/>
+			<Item Name="ClimberMode.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Climber/TypeDefs/ClimberMode.ctl"/>
+			<Item Name="MotionProfileControlState.ctl" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/TypeDefs/MotionProfileControlState.ctl"/>
+			<Item Name="ArmTargetPosition.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TypeDefs/ArmTargetPosition.ctl"/>
+			<Item Name="ArmHomingState.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TypeDefs/ArmHomingState.ctl"/>
+			<Item Name="MPSendState.ctl" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/TypeDefs/MPSendState.ctl"/>
+			<Item Name="DriversStationData.vi" Type="VI" URL="../DeepSpaceSrc/Global_Var-RefNum/DriversStationData.vi"/>
+			<Item Name="OCB_PositionSelector.vi" Type="VI" URL="../DeepSpaceSrc/General/OperatorControlBox/OCB_PositionSelector.vi"/>
+			<Item Name="ManipulatorMode.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TypeDefs/ManipulatorMode.ctl"/>
+			<Item Name="ArmPlanRequest.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TypeDefs/ArmPlanRequest.ctl"/>
+			<Item Name="JoystickControls.ctl" Type="VI" URL="../DeepSpaceSrc/TypeDefs/JoystickControls.ctl"/>
+			<Item Name="ArmJoystickControl.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/ArmJoystickControl.vi"/>
+			<Item Name="RobotMotors.ctl" Type="VI" URL="../DeepSpaceSrc/TypeDefs/RobotComponents/RobotMotors.ctl"/>
+			<Item Name="ArmPlanResponse.ctl" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TypeDefs/ArmPlanResponse.ctl"/>
+			<Item Name="ArmGoToPosition.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/ArmGoToPosition.vi"/>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
@@ -900,6 +948,7 @@ AddOutputFilter chunkFilter
 				<Item Name="Update Other Clients.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/Update Other Clients.vi"/>
 				<Item Name="Usage Statistics.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/Usage Statistics.vi"/>
 				<Item Name="Validate Semaphore Size.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/semaphor.llb/Validate Semaphore Size.vi"/>
+				<Item Name="Version To Dotted String.vi" Type="VI" URL="/&lt;vilib&gt;/_xctls/Version To Dotted String.vi"/>
 				<Item Name="whitespace.ctl" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/whitespace.ctl"/>
 				<Item Name="WPI_AnalogChannelDevRef.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogChannel/WPI_AnalogChannelDevRef.ctl"/>
 				<Item Name="WPI_AnalogChannelGetVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/AnalogChannel/WPI_AnalogChannelGetVoltage.vi"/>
@@ -1196,6 +1245,7 @@ AddOutputFilter chunkFilter
 				<Item Name="WPI_UtilitiesFRCAutomaticValuePublisher.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Utilities/WPI_UtilitiesFRCAutomaticValuePublisher.vi"/>
 				<Item Name="WPI_UtilitiesTimebaseConstants.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/Utilities/WPI_UtilitiesTimebaseConstants.vi"/>
 				<Item Name="Write Value Core.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/Network Tables/Write Value Core.vi"/>
+				<Item Name="XControlSupport.lvlib" Type="Library" URL="/&lt;vilib&gt;/_xctls/XControlSupport.lvlib"/>
 			</Item>
 			<Item Name="FRC_NetworkCommunication.dll" Type="Document" URL="FRC_NetworkCommunication.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
