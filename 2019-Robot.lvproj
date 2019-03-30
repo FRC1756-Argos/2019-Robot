@@ -19,6 +19,10 @@
 				<Item Name="CoordinateConvert_WorldCartesianToShoulderOriginCartesian.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_WorldCartesianToShoulderOriginCartesian.vi"/>
 				<Item Name="ArmPassThroughBodyWristAngle.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPassThroughBodyWristAngle.vi"/>
 				<Item Name="InRangeTolerance.vim" Type="VI" URL="../ArgosLib/Math/InRangeTolerance.vim"/>
+				<Item Name="ArmGetCargoLoopPosition.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmGetCargoLoopPosition.vi"/>
+				<Item Name="ArmDontScrapeCargoHoop.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmDontScrapeCargoHoop.vi"/>
+				<Item Name="ArmPositionToZeroLengthPlanResponse.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPositionToZeroLengthPlanResponse.vi"/>
+				<Item Name="ArmPlanToPath.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPlanToPath.vi"/>
 			</Item>
 			<Item Name="TestArmPathPlanner.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TestArmPathPlanner.vi"/>
 			<Item Name="MotionProfileTest.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileTest.vi"/>
@@ -26,10 +30,6 @@
 			<Item Name="ArmPathPlannerDemo.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerDemoSupport/ArmPathPlannerDemo.vi"/>
 		</Item>
 		<Item Name="ArgosLib.lvlib" Type="Library" URL="../ArgosLib/ArgosLib.lvlib"/>
-		<Item Name="ArmGetCargoLoopPosition.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmGetCargoLoopPosition.vi"/>
-		<Item Name="ArmDontScrapeCargoHoop.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmDontScrapeCargoHoop.vi"/>
-		<Item Name="ArmPositionToZeroLengthPlanResponse.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPositionToZeroLengthPlanResponse.vi"/>
-		<Item Name="ArmPlanToPath.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPlanToPath.vi"/>
 		<Item Name="Dependencies" Type="Dependencies">
 			<Item Name="vi.lib" Type="Folder">
 				<Item Name="FPGA_AIChannel.ctl" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/AI/FPGA_AIChannel.ctl"/>
@@ -1282,7 +1282,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6782B190-04E1-4A41-93AB-3F357B35791E}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">23</Property>
+				<Property Name="Bld_version.build" Type="Int">24</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>
