@@ -1,0 +1,293 @@
+<HTML>
+<HEAD>
+<TITLE>ArmInvalidateHomePositions.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="ArmInvalidateHomePositions.vi"></A><H2>ArmInvalidateHomePositions.vi</H2>
+<P></P>
+<HR>
+<H3>Connector Pane</H3>
+<P><IMG SRC="../../../../img/ArmInvalidateHomePositions.vic.png" ALT="ArmInvalidateHomePositions.vi"></P>
+<HR>
+<H3>Front Panel</H3>
+<P><IMG SRC="../../../../img/ArmInvalidateHomePositions.vip.png" ALT="ArmInvalidateHomePositions.vi"></P>
+<HR>
+<H3>Controls and Indicators</H3>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>ArmPositionValidityIn</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>ShoulderValid</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>ExtensionValid</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>WristValid</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>ArmRecoveryParameters In</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>ShoulderReset</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>ExtendReset</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>WristReset</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>SensorResetDetected</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>ShoulderQuadPos</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>ExtendQuadPos</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>WristQuadPos</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>ArmHomingStateIn</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>ArmHomingValidityIn</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/icclst.png" ALT="icclst"></P>
+</TD>
+<TD>
+<B>ArmPositionValidityOut</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>ShoulderValid</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>ExtensionValid</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>WristValid</B> </TD>
+</TR>
+</Table>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ienum.png" ALT="ienum"></P>
+</TD>
+<TD>
+<B>ArmHomingStateOut</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ienum.png" ALT="ienum"></P>
+</TD>
+<TD>
+<B>ArmHomingValidityOut</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/icclst.png" ALT="icclst"></P>
+</TD>
+<TD>
+<B>ArmRecoveryParameters Out</B> </TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>ShoulderReset</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>ExtendReset</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>WristReset</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>SensorResetDetected</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>ShoulderQuadPos</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>ExtendQuadPos</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>WristQuadPos</B> </TD>
+</TR>
+</Table>
+</UL>
+<HR>
+<H3>Block Diagram</H3>
+<P><IMG SRC="../../../../img/ArmInvalidateHomePositions.vid.png" ALT="ArmInvalidateHomePositions.vi"></P>
+<HR>
+<H3>List of SubVIs and Express VIs with Configuration Information</H3>
+<HR>
+<H3>VI Revision History</H3>
+<P>&quot;ArmInvalidateHomePositions.vi History&quot;</P>
+<P>Current Revision:   6</P>
+<HR>
+<H3>Position in Hierarchy</H3>
+<P><IMG SRC="../../../../img/ArmInvalidateHomePositions.vih.png" ALT="ArmInvalidateHomePositions.vi"></P>
+<HR>
+<H3>Iconified Cluster Constants</H3>
+</BODY>
+</HTML>
