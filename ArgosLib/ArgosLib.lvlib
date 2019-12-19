@@ -51,6 +51,14 @@
 		<Item Name="Shifters.vi" Type="VI" URL="../Drive/Shifters.vi"/>
 		<Item Name="Turning_Power_Mode.vi" Type="VI" URL="../Drive/Turning_Power_Mode.vi"/>
 	</Item>
+	<Item Name="IO" Type="Folder">
+		<Item Name="DIOLED" Type="Folder">
+			<Item Name="TypeDefs" Type="Folder">
+				<Item Name="DIOLEDMode.ctl" Type="VI" URL="../IO/DIOLED/TypeDefs/DIOLEDMode.ctl"/>
+			</Item>
+			<Item Name="DIOLEDUpdate.vi" Type="VI" URL="../IO/DIOLED/DIOLEDUpdate.vi"/>
+		</Item>
+	</Item>
 	<Item Name="Math" Type="Folder">
 		<Item Name="DeltaAngle_Degrees.vi" Type="VI" URL="../Math/DeltaAngle_Degrees.vi"/>
 		<Item Name="DotProduct.vi" Type="VI" URL="../Math/DotProduct.vi"/>
@@ -98,6 +106,26 @@
 		<Item Name="Motor_Limit.vi" Type="VI" URL="../Miscellaneous/Motor_Limit.vi"/>
 		<Item Name="Reach_Target.vi" Type="VI" URL="../Miscellaneous/Reach_Target.vi"/>
 		<Item Name="time_delta.vi" Type="VI" URL="../Miscellaneous/time_delta.vi"/>
+	</Item>
+	<Item Name="MotionProfiling" Type="Folder">
+		<Item Name="MotionPorfileGeneratorSubVIs" Type="Folder">
+			<Item Name="MotionProfileGeneratorFilter1Sum.vi" Type="VI" URL="../MotionProfiling/MotionPorfileGeneratorSubVIs/MotionProfileGeneratorFilter1Sum.vi"/>
+			<Item Name="MotionProfileGeneratorFilter2Sum.vi" Type="VI" URL="../MotionProfiling/MotionPorfileGeneratorSubVIs/MotionProfileGeneratorFilter2Sum.vi"/>
+			<Item Name="MotionProfileGeneratorPosition.vi" Type="VI" URL="../MotionProfiling/MotionPorfileGeneratorSubVIs/MotionProfileGeneratorPosition.vi"/>
+			<Item Name="MotionProfileGeneratorVelocity.vi" Type="VI" URL="../MotionProfiling/MotionPorfileGeneratorSubVIs/MotionProfileGeneratorVelocity.vi"/>
+			<Item Name="MotionProfileGeneratorZeroVelocityPoint.vi" Type="VI" URL="../MotionProfiling/MotionPorfileGeneratorSubVIs/MotionProfileGeneratorZeroVelocityPoint.vi"/>
+		</Item>
+		<Item Name="TestSupport" Type="Folder">
+			<Item Name="PlotMotionProfile.vi" Type="VI" URL="../MotionProfiling/TestSupport/PlotMotionProfile.vi"/>
+		</Item>
+		<Item Name="TypeDefs" Type="Folder">
+			<Item Name="MotionProfileGeneratorParams.ctl" Type="VI" URL="../MotionProfiling/TypeDefs/MotionProfileGeneratorParams.ctl"/>
+			<Item Name="TrajectoryPoint.ctl" Type="VI" URL="../MotionProfiling/TypeDefs/TrajectoryPoint.ctl"/>
+		</Item>
+		<Item Name="MotionProfileGenerator.vi" Type="VI" URL="../MotionProfiling/MotionProfileGenerator.vi"/>
+		<Item Name="MotionProfileGenerator2.vi" Type="VI" URL="../MotionProfiling/MotionProfileGenerator2.vi"/>
+		<Item Name="MotionProfileTest.vi" Type="VI" URL="../MotionProfiling/MotionProfileTest.vi"/>
+		<Item Name="MotionProfileWriter.vi" Type="VI" URL="../MotionProfiling/MotionProfileWriter.vi"/>
 	</Item>
 	<Item Name="Path Planning" Type="Folder">
 		<Item Name="TestSupport" Type="Folder">

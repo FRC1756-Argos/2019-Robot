@@ -25,7 +25,6 @@
 				<Item Name="ArmPlanToPath.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPlanToPath.vi"/>
 			</Item>
 			<Item Name="TestArmPathPlanner.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/TestArmPathPlanner.vi"/>
-			<Item Name="MotionProfileTest.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileTest.vi"/>
 			<Item Name="OperatorControlBox_XControl.xctl" Type="XControl" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerDemoSupport/OperatorControlBox_XControl.xctl"/>
 			<Item Name="ArmPathPlannerDemo.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerDemoSupport/ArmPathPlannerDemo.vi"/>
 		</Item>
@@ -485,6 +484,14 @@
 				<Item Name="CTRE_Phoenix_MotorController_GetBusVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CCI/CTRE_Phoenix_MotorController_GetBusVoltage.vi"/>
 				<Item Name="CTRE_Phoenix_MotorController_GetVoltage.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Get/CTRE_Phoenix_MotorController_GetVoltage.vi"/>
 				<Item Name="CTRE_Phoenix_MotorController_Get_Enhanced.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/CTRE_Phoenix_MotorController_Get_Enhanced.vi"/>
+				<Item Name="WPI_DigitalOutputSetValue.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalOutput/WPI_DigitalOutputSetValue.vi"/>
+				<Item Name="WPI_DigitalModuleSetDIO.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalModule/WPI_DigitalModuleSetDIO.vi"/>
+				<Item Name="FPGA_DIOWriteDO.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/DIO/FPGA_DIOWriteDO.vi"/>
+				<Item Name="FPGA_DIOReadDO.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/SystemInterfaces/DIO/FPGA_DIOReadDO.vi"/>
+				<Item Name="WPI_DigitalOutputToDigitalModule.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/DigitalOutput/WPI_DigitalOutputToDigitalModule.vi"/>
+				<Item Name="CTRE_Phoenix_MotorControl_PushMotionProfileTrajectory.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Closed Loop/Motion Profile/CTRE_Phoenix_MotorControl_PushMotionProfileTrajectory.vi"/>
+				<Item Name="CTRE_Phoenix_MotorControl_ClearMotionProfileTrajectories.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Closed Loop/Motion Profile/CTRE_Phoenix_MotorControl_ClearMotionProfileTrajectories.vi"/>
+				<Item Name="CTRE_Phoenix_MotorControl_GetMotionProfileStatus.vi" Type="VI" URL="/&lt;vilib&gt;/Rock Robotics/WPI/ThirdParty/Phoenix-LabVIEW/Motor Controller/Closed Loop/Motion Profile/CTRE_Phoenix_MotorControl_GetMotionProfileStatus.vi"/>
 			</Item>
 			<Item Name="instr.lib" Type="Folder">
 				<Item Name="DC Motor Controller.lvclass" Type="LVClass" URL="/&lt;instrlib&gt;/DC Motor Controller/HAIOL/DC Motor Controller.lvclass"/>
@@ -522,8 +529,6 @@
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
 			<Item Name="SwitchedCameraData.vi" Type="VI" URL="../PowerUpSrc/Global_Var-RefNum/SwitchedCameraData.vi"/>
-			<Item Name="MotionProfileGeneratorParams.ctl" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/TypeDefs/MotionProfileGeneratorParams.ctl"/>
-			<Item Name="TrajectoryPoint.ctl" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/TypeDefs/TrajectoryPoint.ctl"/>
 			<Item Name="CoordinateConvert_CartesianToArm.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_CartesianToArm.vi"/>
 			<Item Name="GenerateXYArmPathPolygon.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/GenerateXYArmPathPolygon.vi"/>
 			<Item Name="CoordinateConvert_CartesianToArm_Arrays.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_CartesianToArm_Arrays.vi"/>
@@ -531,16 +536,9 @@
 			<Item Name="ArmPathLength.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/ArmPathLength.vi"/>
 			<Item Name="CoordinateConvert_ArmToCartesian.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_ArmToCartesian.vi"/>
 			<Item Name="GenerateArmMotionProfilePoints.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/GenerateArmMotionProfilePoints.vi"/>
-			<Item Name="MotionProfileGenerator.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileGenerator.vi"/>
-			<Item Name="MotionProfileGeneratorFilter1Sum.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileGeneratorSubVIs/MotionProfileGeneratorFilter1Sum.vi"/>
-			<Item Name="MotionProfileGeneratorFilter2Sum.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileGeneratorSubVIs/MotionProfileGeneratorFilter2Sum.vi"/>
-			<Item Name="MotionProfileGeneratorVelocity.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileGeneratorSubVIs/MotionProfileGeneratorVelocity.vi"/>
-			<Item Name="MotionProfileGeneratorPosition.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileGeneratorSubVIs/MotionProfileGeneratorPosition.vi"/>
-			<Item Name="MotionProfileGeneratorZeroVelocityPoint.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/MotionProfileGeneratorSubVIs/MotionProfileGeneratorZeroVelocityPoint.vi"/>
 			<Item Name="RedistributeArmPathPointsVariable.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/RedistributeArmPathPointsVariable.vi"/>
 			<Item Name="CoordinateConvert_ArmToCartesian_Arrays.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/CoordinateConvert_ArmToCartesian_Arrays.vi"/>
 			<Item Name="RedistributeArmAbsolutePoseVariable.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/RedistributeArmAbsolutePoseVariable.vi"/>
-			<Item Name="PlotMotionProfile.vi" Type="VI" URL="../DeepSpaceSrc/General/MotionProfiling/TestSupport/PlotMotionProfile.vi"/>
 			<Item Name="AvoidancePolygon.vi" Type="VI" URL="../DeepSpaceSrc/Implements/Arm/PathPlannerSupport/AvoidancePolygon.vi"/>
 			<Item Name="Config_Robot.ctl" Type="VI" URL="../DeepSpaceSrc/TypeDefs/ConfigComponents/Config_Robot.ctl"/>
 			<Item Name="Config_MotionMagicParams.ctl" Type="VI" URL="../ArgosLib/Config/ConfigComponents/TypeDefs/Config_MotionMagicParams.ctl"/>
@@ -1282,7 +1280,7 @@ AddOutputFilter chunkFilter
 				<Property Name="Bld_localDestDirType" Type="Str">relativeToProject</Property>
 				<Property Name="Bld_previewCacheID" Type="Str">{6782B190-04E1-4A41-93AB-3F357B35791E}</Property>
 				<Property Name="Bld_targetDestDir" Type="Path">/home/lvuser/natinst/bin</Property>
-				<Property Name="Bld_version.build" Type="Int">30</Property>
+				<Property Name="Bld_version.build" Type="Int">31</Property>
 				<Property Name="Bld_version.major" Type="Int">1</Property>
 				<Property Name="Destination[0].destName" Type="Str">startup.rtexe</Property>
 				<Property Name="Destination[0].path" Type="Path">/home/lvuser/natinst/bin/startup.rtexe</Property>

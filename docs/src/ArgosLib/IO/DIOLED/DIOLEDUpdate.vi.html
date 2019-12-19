@@ -1,0 +1,204 @@
+<HTML>
+<HEAD>
+<TITLE>ArgosLib.lvlib:DIOLEDUpdate.vi</TITLE>
+<META NAME="Author" CONTENT="">
+<META NAME="GENERATOR" CONTENT="G Development Environment">
+</HEAD>
+<BODY BGCOLOR="#FFFFFF">
+<A NAME="ArgosLib.lvlib:DIOLEDUpdate.vi"></A><H2>ArgosLib.lvlib:DIOLEDUpdate.vi</H2>
+<P></P>
+<HR>
+<H3>Connector Pane</H3>
+<P><IMG SRC="../../../../img/DIOLEDUpdate.vic.png" ALT="ArgosLib.lvlib:DIOLEDUpdate.vi"></P>
+<HR>
+<H3>Front Panel</H3>
+<P><IMG SRC="../../../../img/DIOLEDUpdate.vip.png" ALT="ArgosLib.lvlib:DIOLEDUpdate.vi"></P>
+<HR>
+<H3>Controls and Indicators</H3>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>DIO LED Mode</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cu16.png" ALT="cu16"></P>
+</TD>
+<TD>
+<B>FastBlinkPeriod (ms)</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cu16.png" ALT="cu16"></P>
+</TD>
+<TD>
+<B>SlowBlinkPeriod (ms)</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ccclst.png" ALT="ccclst"></P>
+</TD>
+<TD>
+<B>DIOLEDDevRefIn</B> <P><B>DigitalOutputDevRef</B> specifies a reference to the digital output you want to use.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cenum.png" ALT="cenum"></P>
+</TD>
+<TD>
+<B>DIO Channel</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cerrcodeclst.png" ALT="cerrcodeclst"></P>
+</TD>
+<TD>
+<B>DevStatus</B> <P><B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error. </P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cbool.png" ALT="cbool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ci32.png" ALT="ci32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/cstr.png" ALT="cstr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> describes the origin of the error or warning.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+</UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/icclst.png" ALT="icclst"></P>
+</TD>
+<TD>
+<B>DIOLEDDevRefOut</B> <P><B>DigitalOutputDevRef</B> returns a reference to the digital output.</P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ienum.png" ALT="ienum"></P>
+</TD>
+<TD>
+<B>DIO Channel</B> </TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ierrcodeclst.png" ALT="ierrcodeclst"></P>
+</TD>
+<TD>
+<B>DevStatus</B> <P><B>error in</B> can accept error information wired from VIs previously called. Use this information to decide if any functionality should be bypassed in the event of errors from other VIs.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error. </P>
+</TD>
+</TR>
+</Table>
+<UL>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ibool.png" ALT="ibool"></P>
+</TD>
+<TD>
+<B>status</B> <P><B>status</B> is TRUE (X) if an error occurred or FALSE (checkmark) to indicate a warning or that no error occurred.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/ii32.png" ALT="ii32"></P>
+</TD>
+<TD>
+<B>code</B> <P><B>code</B> is the error or warning code.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+<Table>
+<TR valign=TOP>
+<TD>
+<P><IMG SRC="../../../../img/istr.png" ALT="istr"></P>
+</TD>
+<TD>
+<B>source</B> <P><B>source</B> describes the origin of the error or warning.</P>
+<P></P>
+<P>Right-click the <B>error in</B> control on the front panel and select <B>Explain Error</B> or <B>Explain Warning</B> from the shortcut menu for more information about the error.</P>
+</TD>
+</TR>
+</Table>
+</UL>
+</UL>
+<HR>
+<H3>Block Diagram</H3>
+<P><IMG SRC="../../../../img/DIOLEDUpdate.vid.png" ALT="ArgosLib.lvlib:DIOLEDUpdate.vi"></P>
+<P><IMG SRC="../../../../img/DIOLEDUpdate.vid1.png" ALT="ArgosLib.lvlib:DIOLEDUpdate.vi"></P>
+<P><IMG SRC="../../../../img/DIOLEDUpdate.vid2.png" ALT="ArgosLib.lvlib:DIOLEDUpdate.vi"></P>
+<HR>
+<H3>List of SubVIs and Express VIs with Configuration Information</H3>
+<HR>
+<H3>VI Revision History</H3>
+<P>&quot;ArgosLib.lvlib:DIOLEDUpdate.vi History&quot;</P>
+<P>Current Revision:   7</P>
+<HR>
+<H3>Position in Hierarchy</H3>
+<P><IMG SRC="../../../../img/DIOLEDUpdate.vih.png" ALT="ArgosLib.lvlib:DIOLEDUpdate.vi"></P>
+<HR>
+<H3>Iconified Cluster Constants</H3>
+</BODY>
+</HTML>
