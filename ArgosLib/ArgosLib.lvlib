@@ -38,9 +38,10 @@
 			<Item Name="MotorControllerOpen.vi" Type="VI" URL="../Drive/MotorControl/MotorControllerOpen.vi"/>
 			<Item Name="MotorSetInvalidHandler.vi" Type="VI" URL="../Drive/MotorControl/MotorSetInvalidHandler.vi"/>
 			<Item Name="RobotDriveMotors.vi" Type="VI" URL="../Drive/MotorControl/RobotDriveMotors.vi"/>
-			<Item Name="RobotDriveOpen6MotorTalon.vi" Type="VI" URL="../Drive/MotorControl/RobotDriveOpen6MotorTalon.vi"/>
+			<Item Name="RobotDriveOpen6Motor.vi" Type="VI" URL="../Drive/MotorControl/RobotDriveOpen6Motor.vi"/>
 			<Item Name="RobotDriveOpen6MotorWithTalonSR.vi" Type="VI" URL="../Drive/MotorControl/RobotDriveOpen6MotorWithTalonSR.vi"/>
 			<Item Name="RobotDriveOpen6MotorWithTalonSRX.vi" Type="VI" URL="../Drive/MotorControl/RobotDriveOpen6MotorWithTalonSRX.vi"/>
+			<Item Name="RobotDriveOpen6MotorWithVenom.vi" Type="VI" URL="../Drive/MotorControl/RobotDriveOpen6MotorWithVenom.vi"/>
 			<Item Name="WPI_RobotDriveGetMotorControlReference_6Motor.vi" Type="VI" URL="../Drive/MotorControl/WPI_RobotDriveGetMotorControlReference_6Motor.vi"/>
 		</Item>
 		<Item Name="ArcadeDrive.vi" Type="VI" URL="../Drive/ArcadeDrive.vi"/>
