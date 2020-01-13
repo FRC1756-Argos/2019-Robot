@@ -10,6 +10,7 @@
 				<Item Name="Config_DigitalIO.ctl" Type="VI" URL="../Config/ConfigComponents/TypeDefs/Config_DigitalIO.ctl"/>
 				<Item Name="Config_DoubleSolenoid.ctl" Type="VI" URL="../Config/ConfigComponents/TypeDefs/Config_DoubleSolenoid.ctl"/>
 				<Item Name="Config_IMU.ctl" Type="VI" URL="../Config/ConfigComponents/TypeDefs/Config_IMU.ctl"/>
+				<Item Name="Config_MotionMagicParams.ctl" Type="VI" URL="../Config/ConfigComponents/TypeDefs/Config_MotionMagicParams.ctl"/>
 				<Item Name="Config_Motor.ctl" Type="VI" URL="../Config/ConfigComponents/TypeDefs/Config_Motor.ctl"/>
 				<Item Name="Config_MotorCtrlType.ctl" Type="VI" URL="../Config/ConfigComponents/TypeDefs/Config_MotorCtrlType.ctl"/>
 				<Item Name="Config_PIDParams.ctl" Type="VI" URL="../Config/ConfigComponents/TypeDefs/Config_PIDParams.ctl"/>
@@ -29,12 +30,17 @@
 	<Item Name="Drive" Type="Folder">
 		<Item Name="MotorControl" Type="Folder">
 			<Item Name="SRXConfig" Type="Folder">
+				<Item Name="SRXConfigBrakeSingle.vi" Type="VI" URL="../Drive/MotorControl/SRXConfig/SRXConfigBrakeSingle.vi"/>
+				<Item Name="SRXConfigCurrentLimitSingle.vi" Type="VI" URL="../Drive/MotorControl/SRXConfig/SRXConfigCurrentLimitSingle.vi"/>
+				<Item Name="SRXConfigInvertSingle.vi" Type="VI" URL="../Drive/MotorControl/SRXConfig/SRXConfigInvertSingle.vi"/>
 				<Item Name="SRXConfigLimitSwitchSingle.vi" Type="VI" URL="../Drive/MotorControl/SRXConfig/SRXConfigLimitSwitchSingle.vi"/>
 				<Item Name="SRXConfigVoltageCompensationSingle.vi" Type="VI" URL="../Drive/MotorControl/SRXConfig/SRXConfigVoltageCompensationSingle.vi"/>
 			</Item>
 			<Item Name="TypeDefs" Type="Folder">
 				<Item Name="RobotDriveMotorSelectorEnum.ctl" Type="VI" URL="../Drive/MotorControl/TypeDefs/RobotDriveMotorSelectorEnum.ctl"/>
 			</Item>
+			<Item Name="MotorControllerDevRefGet.vi" Type="VI" URL="../Drive/MotorControl/MotorControllerDevRefGet.vi"/>
+			<Item Name="MotorControllerFollow.vi" Type="VI" URL="../Drive/MotorControl/MotorControllerFollow.vi"/>
 			<Item Name="MotorControllerOpen.vi" Type="VI" URL="../Drive/MotorControl/MotorControllerOpen.vi"/>
 			<Item Name="MotorSetInvalidHandler.vi" Type="VI" URL="../Drive/MotorControl/MotorSetInvalidHandler.vi"/>
 			<Item Name="RobotDriveMotors.vi" Type="VI" URL="../Drive/MotorControl/RobotDriveMotors.vi"/>
@@ -64,7 +70,9 @@
 		<Item Name="DeltaAngle_Degrees.vi" Type="VI" URL="../Math/DeltaAngle_Degrees.vi"/>
 		<Item Name="DotProduct.vi" Type="VI" URL="../Math/DotProduct.vi"/>
 		<Item Name="Hypotenuse.vi" Type="VI" URL="../Math/Hypotenuse.vi"/>
+		<Item Name="InRangeTolerance.vim" Type="VI" URL="../Math/InRangeTolerance.vim"/>
 		<Item Name="Modulus.vim" Type="VI" URL="../Math/Modulus.vim"/>
+		<Item Name="NormalizeToRange.vim" Type="VI" URL="../Math/NormalizeToRange.vim"/>
 		<Item Name="NumToPercent.vi" Type="VI" URL="../Math/NumToPercent.vi"/>
 		<Item Name="PointLineDistance.vi" Type="VI" URL="../Math/PointLineDistance.vi"/>
 		<Item Name="TangentLineAngle.vi" Type="VI" URL="../Math/TangentLineAngle.vi"/>
@@ -150,6 +158,12 @@
 			<Item Name="SwitchingCameraSendImagesToPCLoop.vi" Type="VI" URL="../Sensors/MultiCamera/SwitchingCameraSendImagesToPCLoop.vi"/>
 			<Item Name="SwitchingHTTPCameraResponder.vi" Type="VI" URL="../Sensors/MultiCamera/SwitchingHTTPCameraResponder.vi"/>
 		</Item>
+		<Item Name="SRXAbsolutePositioning" Type="Folder">
+			<Item Name="SRXCheckReset.vi" Type="VI" URL="../Sensors/SRXAbsolutePositioning/SRXCheckReset.vi"/>
+			<Item Name="SRXGetAbsoluteOffset.vi" Type="VI" URL="../Sensors/SRXAbsolutePositioning/SRXGetAbsoluteOffset.vi"/>
+			<Item Name="SRXGetAbsolutePosition.vi" Type="VI" URL="../Sensors/SRXAbsolutePositioning/SRXGetAbsolutePosition.vi"/>
+			<Item Name="SRXRecoverQuadPosition.vi" Type="VI" URL="../Sensors/SRXAbsolutePositioning/SRXRecoverQuadPosition.vi"/>
+		</Item>
 		<Item Name="Ultrasonic" Type="Folder">
 			<Item Name="TypeDefs" Type="Folder">
 				<Item Name="UltrasonicParameters_Type.ctl" Type="VI" URL="../Sensors/Ultrasonic/TypeDefs/UltrasonicParameters_Type.ctl"/>
@@ -173,6 +187,7 @@
 			<Item Name="EdgeDetector_Type.ctl" Type="VI" URL="../Signal Processing/TypeDefs/EdgeDetector_Type.ctl"/>
 		</Item>
 		<Item Name="Debounce.vi" Type="VI" URL="../Signal Processing/Debounce.vi"/>
+		<Item Name="EdgeCounter.vi" Type="VI" URL="../Signal Processing/EdgeCounter.vi"/>
 		<Item Name="EdgeDetector.vi" Type="VI" URL="../Signal Processing/EdgeDetector.vi"/>
 		<Item Name="HistoricMaxMagnitude.vi" Type="VI" URL="../Signal Processing/HistoricMaxMagnitude.vi"/>
 		<Item Name="Latch.vi" Type="VI" URL="../Signal Processing/Latch.vi"/>
